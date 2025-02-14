@@ -19,7 +19,7 @@ import coil3.compose.rememberAsyncImagePainter
 @Composable
 fun CategoryDetailScreen(Category:Category){
     Column(modifier = Modifier.fillMaxSize().padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(Category.strCategory, textAlign = TextAlign.Center)
+        Text(Category.strCategory, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 35.dp))
         Image(
             painter = rememberAsyncImagePainter(Category.strCategoryThumb), contentDescription = "${Category.strCategory}Thumbnail", modifier = Modifier.wrapContentSize().aspectRatio(1f)
         )

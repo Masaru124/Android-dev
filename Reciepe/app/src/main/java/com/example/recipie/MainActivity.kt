@@ -22,14 +22,13 @@ class MainActivity : ComponentActivity() {
         setContent {
             val navController= rememberNavController()
             RecipieTheme {
-
-                    RecipieApp(
-                       navController=navController
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    RecipieApp( navController = navController,
+                        modifier = Modifier.padding(innerPadding)
                     )
-
+                }
             }
         }
     }
 }
-
 
